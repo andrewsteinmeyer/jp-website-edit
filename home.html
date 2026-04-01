@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey Pediatrics — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Journey Pediatrics · Home (V2) · 3-Page Consolidation ── */
+:root {
+  --copper: #C98769;
+  --copper-hover: #B5745A;
+  --copper-light: rgba(201,135,105,0.12);
+  --olive: #373D36;
+  --cream: #F5F1EB;
+  --beige: #E6DCD4;
+  --white: #FFFFFF;
+  --text: #373D36;
+  --text-sec: rgba(55,61,54,0.65);
+  --text-ter: rgba(55,61,54,0.4);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 6px 16px rgba(0,0,0,0.08);
+  --shadow-card-lg: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.12);
+  --max-w: 1080px;
+  --section-pad: 96px 24px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  background: var(--white);
+}
+h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.2; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+.eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--copper); font-weight: 600; margin-bottom: 14px; }
+.section { padding: var(--section-pad); }
+.section-inner { max-width: var(--max-w); margin: 0 auto; }
+.btn { display: inline-block; background: var(--copper); color: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 500; padding: 16px 28px; border-radius: var(--radius); transition: background 0.2s, transform 0.15s; }
+.btn:hover { background: var(--copper-hover); transform: translateY(-1px); }
+.btn-outline { display: inline-block; background: transparent; color: var(--olive); font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 500; padding: 16px 28px; border-radius: var(--radius); border: 1.5px solid var(--beige); transition: border-color 0.2s; }
+.btn-outline:hover { border-color: var(--copper); }
+
+/* ─── NAV ─── */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--beige); }
+.nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+.nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 15px; color: var(--text-sec); transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-links .nav-cta { background: var(--copper); color: var(--white); padding: 10px 20px; border-radius: var(--radius); font-weight: 500; font-size: 14px; }
+.nav-links .nav-cta:hover { background: var(--copper-hover); color: var(--white); }
+
+/* ─── HERO ─── */
+.hero { padding: 64px 24px 0; }
+.hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.hero-text { max-width: 520px; }
+.hero-text h1 { font-size: clamp(32px, 4.5vw, 48px); letter-spacing: -0.025em; margin-bottom: 20px; line-height: 1.12; }
+.hero-text p { font-size: 18px; color: var(--text-sec); margin-bottom: 32px; line-height: 1.7; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-img { border-radius: 20px; overflow: hidden; aspect-ratio: 4/5; }
+.hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── VALUE PROPS ─── */
+.values { padding: var(--section-pad); background: var(--cream); }
+.values-inner { max-width: var(--max-w); margin: 0 auto; }
+.values-head { text-align: center; margin-bottom: 56px; }
+.values-head h2 { font-size: 32px; margin-bottom: 12px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.value-card { background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px; box-shadow: var(--shadow-card); }
+.value-card h3 { font-size: 18px; margin-bottom: 10px; }
+.value-card p { font-size: 15px; color: var(--text-sec); }
+
+/* ─── PHOTO BREAK ─── */
+.photo-strip { padding: 0 24px; }
+.photo-strip-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 64px 0; }
+.photo-strip-inner img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* ─── TWO PATHS ─── */
+.paths { padding: var(--section-pad); }
+.paths-inner { max-width: var(--max-w); margin: 0 auto; }
+.paths-head { text-align: center; margin-bottom: 56px; }
+.paths-head h2 { font-size: 32px; margin-bottom: 12px; }
+.paths-head p { font-size: 17px; color: var(--text-sec); max-width: 560px; margin: 0 auto; }
+.paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 40px; }
+.path-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px 32px; box-shadow: var(--shadow-card-lg); display: flex; flex-direction: column; }
+.path-card .path-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--copper); font-weight: 600; margin-bottom: 12px; }
+.path-card h3 { font-size: 24px; margin-bottom: 8px; }
+.path-card .path-price { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 600; color: var(--copper); margin-bottom: 16px; }
+.path-card p { font-size: 15px; color: var(--text-sec); margin-bottom: 24px; flex-grow: 1; }
+.path-card .btn { text-align: center; }
+.paths-connector { text-align: center; }
+.paths-connector p { font-size: 16px; color: var(--text-sec); margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* ─── CONDITIONS ─── */
+.conditions { padding: var(--section-pad); background: var(--cream); }
+.conditions-inner { max-width: var(--max-w); margin: 0 auto; }
+.conditions-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.conditions-text h2 { font-size: 32px; margin-bottom: 16px; }
+.conditions-text > p { font-size: 17px; color: var(--text-sec); margin-bottom: 32px; }
+.cond-list { display: flex; flex-direction: column; gap: 20px; }
+.cond-item { display: flex; gap: 16px; align-items: flex-start; }
+.cond-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--white); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: var(--shadow-card); }
+.cond-item h3 { font-size: 16px; margin-bottom: 2px; }
+.cond-item p { font-size: 14px; color: var(--text-sec); }
+.conditions-img { border-radius: 20px; overflow: hidden; }
+.conditions-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+/* ─── PROGRAMS ─── */
+.programs { padding: var(--section-pad); }
+.programs-inner { max-width: var(--max-w); margin: 0 auto; }
+.programs-head { text-align: center; margin-bottom: 56px; }
+.programs-head h2 { font-size: 32px; margin-bottom: 12px; }
+.programs-head p { font-size: 17px; color: var(--text-sec); max-width: 560px; margin: 0 auto; }
+.programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; }
+.prog-card { background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px; box-shadow: var(--shadow-card-lg); display: flex; flex-direction: column; }
+.prog-card .prog-icon { font-size: 32px; margin-bottom: 16px; }
+.prog-card h3 { font-size: 20px; margin-bottom: 8px; }
+.prog-card .prog-who { font-size: 14px; color: var(--text-sec); margin-bottom: 20px; flex-grow: 1; }
+.prog-card .prog-price { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 600; color: var(--copper); margin-bottom: 4px; }
+.prog-card .prog-retail { font-size: 13px; color: var(--text-ter); margin-bottom: 4px; }
+.prog-card .prog-retail s { text-decoration: line-through; }
+.prog-card .prog-duration { font-size: 13px; color: var(--text-sec); margin-bottom: 20px; }
+.prog-card ul { list-style: none; border-top: 1px solid var(--beige); padding-top: 16px; margin-bottom: 24px; }
+.prog-card ul li { font-size: 14px; color: var(--text-sec); padding: 4px 0; }
+.prog-card ul li::before { content: "✓ "; color: var(--copper); font-weight: 600; }
+.prog-card .btn { text-align: center; margin-top: auto; font-size: 15px; padding: 14px 20px; }
+.programs-note { text-align: center; font-size: 15px; color: var(--text-sec); }
+
+/* ─── MEMBERSHIP DETAIL ─── */
+.membership { padding: var(--section-pad); background: var(--cream); }
+.membership-inner { max-width: var(--max-w); margin: 0 auto; }
+.membership-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.membership-left h2 { font-size: 32px; margin-bottom: 8px; }
+.membership-left .mem-price { font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 600; color: var(--copper); margin-bottom: 6px; }
+.membership-left .mem-period { font-size: 16px; color: var(--text-sec); margin-bottom: 24px; }
+.mem-benefits { list-style: none; margin-bottom: 32px; }
+.mem-benefits li { padding: 8px 0; font-size: 15px; color: var(--text-sec); display: flex; gap: 10px; }
+.mem-benefits li::before { content: "✓"; color: var(--copper); font-weight: 600; flex-shrink: 0; }
+.membership-right { background: var(--white); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-card-lg); }
+.membership-right h3 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--copper); font-weight: 600; margin-bottom: 20px; }
+.why-list { list-style: none; }
+.why-list li { padding: 14px 0; border-bottom: 1px solid var(--beige); }
+.why-list li:last-child { border-bottom: none; }
+.why-list li strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.why-list li span { font-size: 14px; color: var(--text-sec); }
+
+/* ─── PRICING TABLE ─── */
+.pricing { padding: var(--section-pad); }
+.pricing-inner { max-width: var(--max-w); margin: 0 auto; }
+.pricing-head { margin-bottom: 40px; }
+.pricing-head h2 { font-size: 32px; margin-bottom: 8px; }
+.pricing-head p { font-size: 16px; color: var(--text-sec); max-width: 540px; }
+.price-table { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-card-lg); overflow: hidden; margin-bottom: 40px; }
+.pt-head { display: grid; grid-template-columns: 1fr 120px 120px; padding: 14px 28px; background: var(--cream); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-ter); }
+.pt-head span:nth-child(n+2) { text-align: right; }
+.pt-row { display: grid; grid-template-columns: 1fr 120px 120px; padding: 16px 28px; border-bottom: 1px solid rgba(230,220,212,0.5); align-items: center; }
+.pt-row:last-child { border-bottom: none; }
+.pt-svc { font-size: 15px; font-weight: 500; }
+.pt-note { font-size: 13px; color: var(--text-ter); margin-top: 2px; }
+.pt-retail { text-align: right; font-size: 15px; color: var(--text-ter); text-decoration: line-through; }
+.pt-member { text-align: right; font-size: 15px; font-weight: 600; color: var(--copper); }
+.pt-save { text-align: right; font-size: 13px; font-weight: 600; color: var(--copper); }
+.pricing-fine { font-size: 13px; color: var(--text-ter); max-width: 640px; }
+
+/* ─── CREDENTIALS ─── */
+.creds { padding: 56px 24px; text-align: center; background: var(--cream); }
+.creds-inner { max-width: var(--max-w); margin: 0 auto; }
+.creds .eyebrow { margin-bottom: 24px; color: var(--text-ter); }
+.cred-logos { display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
+.cred-logos span { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-ter); letter-spacing: 0.04em; }
+
+/* ─── BOTTOM CTA ─── */
+.bottom-cta { padding: 96px 24px 112px; text-align: center; }
+.bottom-cta-inner { max-width: 600px; margin: 0 auto; }
+.bottom-cta h2 { font-size: 32px; margin-bottom: 16px; }
+.bottom-cta .stakes { font-size: 17px; font-style: italic; color: var(--text-sec); margin-bottom: 16px; line-height: 1.7; }
+.bottom-cta p { font-size: 16px; color: var(--text-sec); margin-bottom: 28px; }
+.bottom-cta-img { max-width: var(--max-w); margin: -32px auto 0; padding: 0 24px; }
+.bottom-cta-img img { width: 100%; border-radius: 20px; aspect-ratio: 21/9; object-fit: cover; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-img { max-width: 480px; margin: 0 auto; }
+  .paths-grid { grid-template-columns: 1fr; }
+  .programs-grid { grid-template-columns: 1fr; }
+  .conditions-layout { grid-template-columns: 1fr; }
+  .conditions-img { max-width: 400px; }
+  .membership-layout { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .photo-strip-inner { grid-template-columns: 1fr; }
+  .pt-head, .pt-row { grid-template-columns: 1fr 80px 80px; }
+  .pt-head span:nth-child(4), .pt-row .pt-save { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Journey Pediatrics</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="book.html" class="nav-cta">Book a Call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">Functional &amp; Integrative Pediatrics — Mount Pleasant, SC</div>
+      <h1>Your Child Is Complex. Their Care Should Be, Too.</h1>
+      <p>If you've been told your child is "fine" — but you know they're not — you're in the right place. We specialize in finding the root causes that standard pediatrics misses: PANS/PANDAS, ADHD, chronic gut issues, and more.</p>
+      <div class="hero-ctas">
+        <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Free Discovery Call →</a>
+        <a href="#membership" class="btn-outline">Explore Membership →</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="alice-stethoscope-girl.webp" alt="Alice examining a young girl with a stethoscope">
+    </div>
+  </div>
+</section>
+
+<!-- Value Props -->
+<section class="values">
+  <div class="values-inner">
+    <div class="values-head">
+      <div class="eyebrow">Why Journey?</div>
+      <h2>Care That Works Differently</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Root-Cause Medicine</h3>
+        <p>We don't chase symptoms. We run the labs, read the data, and build a plan around what's actually happening in your child's body.</p>
+      </div>
+      <div class="value-card">
+        <h3>Time That Matters</h3>
+        <p>60-minute visits. Real conversations. A team that knows your child's name, their history, and what keeps you up at night.</p>
+      </div>
+      <div class="value-card">
+        <h3>IFM-Trained Clinicians</h3>
+        <p>Our team trained with the Institute for Functional Medicine (IFM), MAPS, and FMCA — the leading credentialing bodies in functional and integrative medicine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo Strip -->
+<section class="photo-strip">
+  <div class="photo-strip-inner">
+    <img src="girl-reading-dog-porch.png" alt="Girl reading on a porch swing with a golden retriever">
+    <img src="alice-mom-boy.webp" alt="Alice with a mother and her son in a living room">
+    <img src="boy-window-seaglass.png" alt="Boy holding seaglass by a window">
+  </div>
+</section>
+
+<!-- Two Paths -->
+<section class="paths">
+  <div class="paths-inner">
+    <div class="paths-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>Two Ways to Start Your Journey</h2>
+      <p>Whether you need ongoing support or a focused programme, we meet your family where you are.</p>
+    </div>
+    <div class="paths-grid">
+      <div class="path-card">
+        <div class="path-label">Ongoing Care</div>
+        <h3>Foundations Membership</h3>
+        <div class="path-price">$100/month</div>
+        <p>For families who want ongoing access, messaging, prescription refills, and simple clinical support — without the intensity of a full program. Most families start here.</p>
+        <a href="#membership" class="btn">Learn More About Membership →</a>
+      </div>
+      <div class="path-card">
+        <div class="path-label">Specialty Programs</div>
+        <h3>Functional Pathways</h3>
+        <div class="path-price">From $1,100</div>
+        <p>Three-month structured programs for PANS/PANDAS, gut health, and ADHD. Full labs, treatment protocols, and a team guiding every step.</p>
+        <a href="#programs" class="btn">See Our Programs →</a>
+      </div>
+    </div>
+    <div class="paths-connector">
+      <p>Not sure which path is right? That's exactly what the discovery call is for. No commitment, no pressure — just a conversation.</p>
+      <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Free Discovery Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Conditions -->
+<section class="conditions">
+  <div class="conditions-inner">
+    <div class="conditions-layout">
+      <div class="conditions-text">
+        <div class="eyebrow">What We Treat</div>
+        <h2>Complex Kids Deserve Better Answers</h2>
+        <p>We specialize in the conditions other practices don't have time for.</p>
+        <div class="cond-list">
+          <div class="cond-item">
+            <div class="cond-icon">🧠</div>
+            <div>
+              <h3>PANS / PANDAS</h3>
+              <p>Autoimmune-triggered neuropsychiatric conditions requiring functional workup and targeted treatment.</p>
+            </div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-icon">🌿</div>
+            <div>
+              <h3>Gut Health</h3>
+              <p>GI issues, food sensitivities, and microbiome imbalances addressed through advanced testing and nutrition.</p>
+            </div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-icon">💡</div>
+            <div>
+              <h3>ADHD &amp; Cognitive</h3>
+              <p>A functional approach to attention and behaviour — looking beyond medication to root-cause drivers.</p>
+            </div>
+          </div>
+          <div class="cond-item">
+            <div class="cond-icon">🌱</div>
+            <div>
+              <h3>Functional Wellness</h3>
+              <p>Proactive, whole-child health — optimising nutrition, sleep, immunity, and development from the ground up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="conditions-img">
+        <img src="alice-otoscope-girl.jpg" alt="Alice examining a girl with an otoscope">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="programs" id="programs">
+  <div class="programs-inner">
+    <div class="programs-head">
+      <div class="eyebrow">Functional Pathways</div>
+      <h2>Structured Programs for the Tough Stuff</h2>
+      <p>Three-month specialty programs. Full labs, a treatment protocol, and a team with you every step. One price, no surprises.</p>
+    </div>
+    <div class="programs-grid">
+      <!-- PANS/PANDAS -->
+      <div class="prog-card">
+        <div class="prog-icon">🧠</div>
+        <h3>PANS / PANDAS</h3>
+        <p class="prog-who">For families whose child experienced sudden-onset behavioral changes — OCD, tics, anxiety, rage, or regression — and hasn't gotten clear answers.</p>
+        <div class="prog-price">$1,500</div>
+        <div class="prog-retail">Retail value: <s>$2,450</s></div>
+        <div class="prog-duration">3-month program · 2-payment option available</div>
+        <ul>
+          <li>Full diagnostic lab panel (60+ biomarkers)</li>
+          <li>Initial 60-minute deep-dive consultation</li>
+          <li>Structured follow-up visits over 3 months</li>
+          <li>Personalized treatment protocol</li>
+          <li>Transition plan for ongoing care</li>
+        </ul>
+        <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Discovery Call →</a>
+      </div>
+      <!-- Gut Health -->
+      <div class="prog-card">
+        <div class="prog-icon">🌿</div>
+        <h3>Gut Health Deep Dive</h3>
+        <p class="prog-who">For children with chronic digestive issues, food sensitivities, or unexplained inflammation — where standard GI workups came back "normal."</p>
+        <div class="prog-price">$1,300</div>
+        <div class="prog-retail">Retail value: <s>$2,100</s></div>
+        <div class="prog-duration">3-month program · 2-payment option available</div>
+        <ul>
+          <li>Comprehensive gut health lab panel (GI-MAP®)</li>
+          <li>Initial 60-minute consultation</li>
+          <li>Structured follow-up visits over 3 months</li>
+          <li>Individualized gut healing protocol</li>
+          <li>Transition plan for maintenance</li>
+        </ul>
+        <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Discovery Call →</a>
+      </div>
+      <!-- ADHD -->
+      <div class="prog-card">
+        <div class="prog-icon">💡</div>
+        <h3>ADHD &amp; Cognitive</h3>
+        <p class="prog-who">For families looking beyond medication-first approaches to ADHD, focus issues, or cognitive concerns — who want to understand the biological drivers.</p>
+        <div class="prog-price">$1,100</div>
+        <div class="prog-retail">Retail value: <s>$1,900</s></div>
+        <div class="prog-duration">3-month program · 2-payment option available</div>
+        <ul>
+          <li>Targeted cognitive and metabolic lab panel</li>
+          <li>Initial 60-minute consultation</li>
+          <li>Structured follow-up visits over 3 months</li>
+          <li>Personalized protocol (nutrition, supplementation, lifestyle)</li>
+          <li>Transition plan for sustained progress</li>
+        </ul>
+        <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Discovery Call →</a>
+      </div>
+    </div>
+    <p class="programs-note">Members receive a $100 credit when enrolling in any pathway. All programs can be paid in 2 installments.</p>
+  </div>
+</section>
+
+<!-- Membership Detail -->
+<section class="membership" id="membership">
+  <div class="membership-inner">
+    <div class="membership-layout">
+      <div class="membership-left">
+        <div class="eyebrow">Foundations Membership</div>
+        <h2>Pediatric Care Without the Runaround</h2>
+        <div class="mem-price">$100</div>
+        <div class="mem-period">per month · 3-month minimum</div>
+        <ul class="mem-benefits">
+          <li>Async messaging with your clinical team</li>
+          <li>Prescription refills &amp; simple lab orders</li>
+          <li>School &amp; camp forms included</li>
+          <li>Priority scheduling for all appointments</li>
+          <li>Rapid strep, flu &amp; COVID testing</li>
+          <li>Annual functional wellness check-in</li>
+          <li>Member pricing on labs, visits &amp; supplements</li>
+          <li>$100 credit toward any Functional Pathway</li>
+        </ul>
+        <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Free Discovery Call →</a>
+      </div>
+      <div class="membership-right">
+        <h3>Why Families Choose Membership</h3>
+        <ul class="why-list">
+          <li>
+            <strong>A clinician who actually knows you</strong>
+            <span>Not 2,000 patients. Yours. Your child's name, their history, what's worked, what hasn't.</span>
+          </li>
+          <li>
+            <strong>Real access</strong>
+            <span>Message your team directly. No call center. No waiting on hold.</span>
+          </li>
+          <li>
+            <strong>Continuity</strong>
+            <span>The same clinician, visit after visit. No starting over every time.</span>
+          </li>
+          <li>
+            <strong>Flexibility</strong>
+            <span>Need more? Step into a Functional Pathway anytime with a $100 credit toward enrollment.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-head">
+      <div class="eyebrow">Transparent Pricing</div>
+      <h2>Know Exactly What You're Paying</h2>
+      <p>Functional pediatric care shouldn't be a financial mystery. Here's what every service costs, and how membership makes it all more accessible.</p>
+    </div>
+
+    <div class="price-table">
+      <div class="pt-head">
+        <span>Service</span><span>Retail</span><span>Member</span>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Functional Consult</div><div class="pt-note">60–90 min comprehensive evaluation</div></div>
+        <div class="pt-retail">$400</div>
+        <div class="pt-member">Included</div>
+      </div>
+    </div>
+
+    <p style="font-size:15px; color: var(--text-sec); margin-top:20px; padding: 16px 20px; background: var(--bg-alt, #f8f7f5); border-radius: 10px;">💊 Supplements are given at discount rates — from 15–30% off retail.</p>
+
+    <p class="pricing-fine" style="margin-top:20px;">Need a standalone functional consult without membership? Available at $400.</p>
+  </div>
+</section>
+
+<!-- Credentials -->
+<section class="creds">
+  <div class="creds-inner">
+    <div class="eyebrow">Trusted Training. Proven Frameworks.</div>
+    <div class="cred-logos">
+      <span>IFM</span>
+      <span>MAPS</span>
+      <span>FMCA</span>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="bottom-cta">
+  <div class="bottom-cta-inner">
+    <h2>Ready to Talk?</h2>
+    <p class="stakes">Every month spent in waiting rooms getting "everything looks fine" is another month without a real answer. You don't have to keep accepting that.</p>
+    <p>A free 15-minute discovery call with someone from the Journey team. No sales pitch — just an honest conversation about whether we're the right fit for your family.</p>
+    <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book Your Free Call →</a>
+  </div>
+</section>
+<div class="bottom-cta-img">
+  <img src="alice-playing-kids.webp" alt="Alice on the floor playing with two kids">
+</div>
+
+<div style="height: 80px;"></div>
+
+</body>
+</html>

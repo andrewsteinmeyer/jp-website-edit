@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey Pediatrics — About Alice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --copper: #C98769;
+  --copper-hover: #B5745A;
+  --olive: #373D36;
+  --cream: #F5F1EB;
+  --beige: #E6DCD4;
+  --white: #FFFFFF;
+  --text: #373D36;
+  --text-sec: rgba(55,61,54,0.65);
+  --text-ter: rgba(55,61,54,0.4);
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 6px 16px rgba(0,0,0,0.08);
+  --shadow-card-lg: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.12);
+  --max-w: 1080px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Sans 3', -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  background: var(--white);
+}
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+.eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--copper); font-weight: 600; margin-bottom: 14px; }
+.btn { display: inline-block; background: var(--copper); color: var(--white); font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 500; padding: 16px 28px; border-radius: var(--radius); transition: background 0.2s, transform 0.15s; }
+.btn:hover { background: var(--copper-hover); transform: translateY(-1px); }
+
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--beige); }
+.nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+.nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 15px; color: var(--text-sec); transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-links .nav-cta { background: var(--copper); color: var(--white); padding: 10px 20px; border-radius: var(--radius); font-weight: 500; font-size: 14px; }
+.nav-links .nav-cta:hover { background: var(--copper-hover); color: var(--white); }
+
+/* Hero — full-width image with text overlay */
+.about-hero { position: relative; height: 520px; overflow: hidden; }
+.about-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.about-hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 64px 24px 48px; background: linear-gradient(to top, rgba(55,61,54,0.85) 0%, rgba(55,61,54,0.4) 60%, transparent 100%); }
+.about-hero-text { max-width: var(--max-w); margin: 0 auto; color: var(--white); }
+.about-hero-text .eyebrow { color: var(--copper); }
+.about-hero-text h1 { font-size: clamp(28px, 4.5vw, 44px); letter-spacing: -0.02em; color: var(--white); margin-bottom: 12px; }
+.about-hero-text p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 520px; }
+
+/* Bio Section */
+.bio { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px; }
+.bio-layout { display: grid; grid-template-columns: 320px 1fr; gap: 56px; align-items: start; }
+.bio-photo { border-radius: 20px; overflow: hidden; position: sticky; top: 100px; }
+.bio-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.bio-content h2 { font-size: 28px; margin-bottom: 4px; }
+.bio-role { font-size: 15px; color: var(--copper); font-weight: 600; margin-bottom: 20px; }
+.bio-content p { font-size: 16px; color: var(--text-sec); margin-bottom: 16px; line-height: 1.75; }
+.bio-creds { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.bio-cred { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: var(--cream); color: var(--text-sec); padding: 6px 14px; border-radius: 8px; }
+
+/* Team */
+.team { background: var(--cream); padding: 80px 24px; }
+.team-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.team-text h2 { font-size: 28px; margin-bottom: 16px; }
+.team-text p { font-size: 16px; color: var(--text-sec); line-height: 1.75; }
+.team-img { border-radius: 20px; overflow: hidden; }
+.team-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* Methodology */
+.method { max-width: var(--max-w); margin: 0 auto; padding: 80px 24px; }
+.method-header { margin-bottom: 48px; }
+.method-header h2 { font-size: 28px; margin-bottom: 12px; }
+.method-header p { font-size: 16px; color: var(--text-sec); max-width: 600px; line-height: 1.75; }
+.method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.method-card { background: var(--cream); border-radius: var(--radius-lg); padding: 32px 24px; }
+.method-card .method-icon { font-size: 28px; margin-bottom: 14px; }
+.method-card h3 { font-size: 17px; margin-bottom: 8px; }
+.method-card p { font-size: 14px; color: var(--text-sec); }
+.method-practice { margin-top: 40px; }
+.method-practice h3 { font-size: 18px; margin-bottom: 16px; }
+.method-practice ul { list-style: none; }
+.method-practice ul li { font-size: 15px; color: var(--text-sec); padding: 8px 0; display: flex; gap: 10px; }
+.method-practice ul li::before { content: "→"; color: var(--copper); font-weight: 600; flex-shrink: 0; }
+
+/* Credentials */
+.credentials { background: var(--cream); padding: 64px 24px; }
+.credentials-inner { max-width: var(--max-w); margin: 0 auto; text-align: center; }
+.credentials h2 { font-size: 22px; margin-bottom: 32px; }
+.cred-row { display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
+.cred-item { text-align: center; }
+.cred-logo { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 700; color: var(--copper); margin-bottom: 8px; }
+.cred-item p { font-size: 13px; color: var(--text-ter); max-width: 180px; }
+
+/* Bottom CTA */
+.about-cta { text-align: center; padding: 80px 24px 96px; }
+.about-cta h2 { font-size: 28px; margin-bottom: 12px; }
+.about-cta p { font-size: 16px; color: var(--text-sec); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* Photo break */
+.photo-break { padding: 0 24px; }
+.photo-break-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 0 64px; }
+.photo-break-inner img { border-radius: var(--radius-lg); width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+
+@media (max-width: 900px) {
+  .bio-layout { grid-template-columns: 1fr; }
+  .bio-photo { position: static; max-width: 360px; }
+  .team-inner { grid-template-columns: 1fr; }
+  .method-grid { grid-template-columns: 1fr; }
+  .about-hero { height: 380px; }
+  .photo-break-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">Journey Pediatrics</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="book.html" class="nav-cta">Book a Call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero with Alice portrait -->
+<section class="about-hero">
+  <img src="alice-mom-boy.webp" alt="Alice with a mother and her son">
+  <div class="about-hero-overlay">
+    <div class="about-hero-text">
+      <div class="eyebrow">About the Practice</div>
+      <h1>A Team Built for the Kids Nobody Can Figure Out</h1>
+      <p>Journey Pediatrics was founded on a simple belief: complex children deserve clinicians who won't give up on them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Alice Bio -->
+<section class="bio">
+  <div class="bio-layout">
+    <div class="bio-photo">
+      <img src="alice-doorway-portrait.jpg" alt="Alice LoGuidice — Clinical Lead at Journey Pediatrics">
+    </div>
+    <div class="bio-content">
+      <div class="eyebrow">Clinical Lead</div>
+      <h2>Meet Alice LoGuidice</h2>
+      <div class="bio-role">MSN, APRN, CPNP-PC, FMCHC</div>
+
+      <p>Alice is a nurse practitioner with advanced training from the Institute for Functional Medicine (IFM), the Medical Academy of Pediatric Special Needs (MAPS), and the Functional Medicine Coaching Academy (FMCA).</p>
+
+      <p>She built Journey Pediatrics because she kept seeing the same thing: bright, complicated kids falling through the cracks of conventional medicine. Parents told "they'll grow out of it." Labs that never got run. Fifteen-minute appointments for problems that needed sixty.</p>
+
+      <p>Alice doesn't do band-aids. She runs the panels, reads the data, and stays with families until the picture makes sense.</p>
+
+      <p>With 24 years of clinical experience and a deep personal investment in getting this right — she's also a mother of three — Alice didn't create another medical practice. She created the one she wished existed.</p>
+
+      <div class="bio-creds">
+        <span class="bio-cred">IFM Trained</span>
+        <span class="bio-cred">MAPS</span>
+        <span class="bio-cred">FMCA</span>
+        <span class="bio-cred">24 Years Clinical Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Broader Team -->
+<section class="team">
+  <div class="team-inner">
+    <div class="team-text">
+      <div class="eyebrow">The Journey Team</div>
+      <h2>More Than One Person Behind the Curtain</h2>
+      <p>Journey isn't a one-person practice. Behind every patient interaction is a team handling coordination, follow-ups, and operations — so your clinician can focus entirely on your child.</p>
+      <p style="margin-top:16px;">From discovery calls to follow-up visits, you're never just talking to a machine — you're talking to people who know your child's story.</p>
+    </div>
+    <div class="team-img">
+      <img src="alice-playing-kids.webp" alt="Alice on the floor playing with two kids">
+    </div>
+  </div>
+</section>
+
+<!-- Photo break -->
+<section class="photo-break">
+  <div class="photo-break-inner">
+    <img src="girl-drawing-dock-marsh.png" alt="Girl drawing on a marsh dock">
+    <img src="boy-surfboard-beach.png" alt="Boy with surfboard on the beach">
+  </div>
+</section>
+
+<!-- Methodology -->
+<section class="method">
+  <div class="method-header">
+    <div class="eyebrow">Our Approach</div>
+    <h2>The Functional Medicine Approach</h2>
+    <p>Traditional pediatrics asks: <em>What symptoms do we see?</em> Functional medicine asks: <em>Why are those symptoms there in the first place?</em></p>
+    <p style="margin-top:12px;">We use the IFM framework — symptoms are the branches, and we work our way down to the roots: genetics, gut health, inflammation, environmental triggers, nutritional status. This isn't alternative medicine. It's thorough medicine.</p>
+  </div>
+
+  <div class="method-grid">
+    <div class="method-card">
+      <div class="method-icon">🔍</div>
+      <h3>Root-Cause Investigation</h3>
+      <p>Advanced lab panels and comprehensive evaluation to understand what's driving your child's symptoms — not just managing them.</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">🌱</div>
+      <h3>Whole-Child Treatment</h3>
+      <p>Nutrition, environment, gut health, immune function, sleep — we look at every system because they're all connected.</p>
+    </div>
+    <div class="method-card">
+      <div class="method-icon">🤝</div>
+      <h3>Partnership with Families</h3>
+      <p>You know your child better than anyone. We bring the clinical expertise. Together, we build a plan that works for your family.</p>
+    </div>
+  </div>
+
+  <div class="method-practice">
+    <h3>What that looks like in practice</h3>
+    <ul>
+      <li>Comprehensive lab panels — including gut health, hormonal, and metabolic markers most standard labs never run</li>
+      <li>60-minute visits focused on building a full clinical picture</li>
+      <li>Individualized treatment protocols — not cookie-cutter plans</li>
+      <li>Ongoing support between visits via messaging</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Credentials -->
+<section class="credentials">
+  <div class="credentials-inner">
+    <h2>Training &amp; Credentials</h2>
+    <div class="cred-row">
+      <div class="cred-item">
+        <div class="cred-logo">IFM</div>
+        <p>Institute for Functional Medicine</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-logo">MAPS</div>
+        <p>Medical Academy of Pediatric Special Needs</p>
+      </div>
+      <div class="cred-item">
+        <div class="cred-logo">FMCA</div>
+        <p>Functional Medicine Coaching Academy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <h2>Want to See If We're the Right Fit?</h2>
+  <p>Book a free 15-minute discovery call with someone from the Journey team. No pressure, no commitment — just a conversation.</p>
+  <a href="book.html" class="btn">Book a Free Discovery Call →</a>
+</section>
+
+</body>
+</html>
