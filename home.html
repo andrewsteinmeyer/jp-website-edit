@@ -38,16 +38,6 @@ a { color: inherit; text-decoration: none; }
 .btn-outline { display: inline-block; background: transparent; color: var(--olive); font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 500; padding: 16px 28px; border-radius: var(--radius); border: 1.5px solid var(--beige); transition: border-color 0.2s; }
 .btn-outline:hover { border-color: var(--copper); }
 
-/* ─── NAV ─── */
-
-
-
-
-
-
-
-
-
 /* ─── HERO ─── */
 .hero { padding: 64px 24px 0; }
 .hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -149,15 +139,14 @@ a { color: inherit; text-decoration: none; }
 .pricing-head h2 { font-size: 32px; margin-bottom: 8px; }
 .pricing-head p { font-size: 16px; color: var(--text-sec); max-width: 540px; }
 .price-table { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-card-lg); overflow: hidden; margin-bottom: 40px; }
-.pt-head { display: grid; grid-template-columns: 1fr 120px 120px; padding: 14px 28px; background: var(--cream); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-ter); }
+.pt-head { display: grid; grid-template-columns: 1fr 140px 140px; padding: 14px 28px; background: var(--cream); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-ter); }
 .pt-head span:nth-child(n+2) { text-align: right; }
-.pt-row { display: grid; grid-template-columns: 1fr 120px 120px; padding: 16px 28px; border-bottom: 1px solid rgba(230,220,212,0.5); align-items: center; }
+.pt-row { display: grid; grid-template-columns: 1fr 140px 140px; padding: 16px 28px; border-bottom: 1px solid rgba(230,220,212,0.5); align-items: center; }
 .pt-row:last-child { border-bottom: none; }
 .pt-svc { font-size: 15px; font-weight: 500; }
 .pt-note { font-size: 13px; color: var(--text-ter); margin-top: 2px; }
 .pt-retail { text-align: right; font-size: 15px; color: var(--text-ter); text-decoration: line-through; }
 .pt-member { text-align: right; font-size: 15px; font-weight: 600; color: var(--copper); }
-.pt-save { text-align: right; font-size: 13px; font-weight: 600; color: var(--copper); }
 .pricing-fine { font-size: 13px; color: var(--text-ter); max-width: 640px; }
 
 /* ─── CREDENTIALS ─── */
@@ -165,8 +154,7 @@ a { color: inherit; text-decoration: none; }
 .creds-inner { max-width: var(--max-w); margin: 0 auto; }
 .creds .eyebrow { margin-bottom: 24px; color: var(--text-ter); }
 .cred-logos { display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
-.cred-logos img { height: 44px; width: auto; opacity: 0.55; transition: opacity 0.2s; }
-.cred-logos img:hover { opacity: 0.8; }
+.cred-logos span { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-ter); letter-spacing: 0.04em; }
 
 /* ─── BOTTOM CTA ─── */
 .bottom-cta { padding: 96px 24px 112px; text-align: center; }
@@ -188,8 +176,7 @@ a { color: inherit; text-decoration: none; }
   .membership-layout { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
   .photo-strip-inner { grid-template-columns: 1fr; }
-  .pt-head, .pt-row { grid-template-columns: 1fr 80px 80px; }
-  .pt-head span:nth-child(4), .pt-row .pt-save { display: none; }
+  .pt-head, .pt-row { grid-template-columns: 1fr 100px 100px; }
 }
 </style>
 
@@ -199,8 +186,8 @@ a { color: inherit; text-decoration: none; }
   <div class="hero-inner">
     <div class="hero-text">
       <div class="eyebrow">Functional &amp; Integrative Pediatrics — Mount Pleasant, SC</div>
-      <h1>Your Child Is Complex. Their Care Should Be, Too.</h1>
-      <p>If you've been told your child is "fine" — but you know they're not — you're in the right place. We specialize in finding the root causes that standard pediatrics misses: PANS/PANDAS, ADHD, chronic gut issues, and more.</p>
+      <h1>Your Child Has Been Waiting for Answers Long Enough.</h1>
+      <p>If you've been told your child is "fine" but you know they're not. You're in the right place. We specialize in finding the root causes that standard pediatrics misses: PANS/PANDAS, ADHD, chronic gut issues, mold impact, and more.</p>
       <div class="hero-ctas">
         <a href="https://calendly.com/d/cvmt-sbx-rwh/journey-pediatrics-discovery-call" class="btn">Book a Free Discovery Call →</a>
         <a href="#membership" class="btn-outline">Explore Membership →</a>
@@ -239,9 +226,9 @@ a { color: inherit; text-decoration: none; }
 <!-- Photo Strip -->
 <section class="photo-strip">
   <div class="photo-strip-inner">
-    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/diverse-patient-1.png" alt="Diverse families at Journey Pediatrics">
+    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/girl-reading-dog-porch.png" alt="Girl reading on a porch swing with a golden retriever">
     <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/alice-mom-boy.webp" alt="Alice with a mother and her son in a living room">
-    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/diverse-patient-2.png" alt="Children and families at Journey Pediatrics">
+    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/boy-window-seaglass.png" alt="Boy holding seaglass by a window">
   </div>
 </section>
 
@@ -310,7 +297,7 @@ a { color: inherit; text-decoration: none; }
             <div class="cond-icon">🌱</div>
             <div>
               <h3>Functional Wellness</h3>
-              <p>Proactive, whole-child health — optimizing nutrition, sleep, immunity, and development from the ground up.</p>
+              <p>Proactive, whole-child health — optimising nutrition, sleep, immunity, and development from the ground up.</p>
             </div>
           </div>
         </div>
@@ -444,18 +431,76 @@ a { color: inherit; text-decoration: none; }
 
     <div class="price-table">
       <div class="pt-head">
-        <span>Service</span><span>Retail</span><span>Member</span>
+        <span>Service / Lab</span><span>Retail Price</span><span>Member Price</span>
       </div>
       <div class="pt-row">
-        <div><div class="pt-svc">Functional Consult</div><div class="pt-note">60–90 min comprehensive evaluation</div></div>
+        <div><div class="pt-svc">1 hour Functional Consult</div></div>
         <div class="pt-retail">$400</div>
         <div class="pt-member">Included</div>
       </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Strep, RSV, Flu, COVID Test</div></div>
+        <div class="pt-retail">$20–$40</div>
+        <div class="pt-member">Included</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">School, camp, sports note</div></div>
+        <div class="pt-retail">$150</div>
+        <div class="pt-member">Included</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Intellxx DNA Genomic Test</div></div>
+        <div class="pt-retail">$2,250</div>
+        <div class="pt-member">$1,700</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Comprehensive PANS Workup</div><div class="pt-note">Custom built for Journey Pediatrics</div></div>
+        <div class="pt-retail">$699</div>
+        <div class="pt-member">$449</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">GI Map with Zonulin</div></div>
+        <div class="pt-retail">$497</div>
+        <div class="pt-member">$425</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Mosaic Organic Acids Test (OAT)</div></div>
+        <div class="pt-retail">$398</div>
+        <div class="pt-member">$298</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Anti-DNase B Antibodies</div></div>
+        <div class="pt-retail">$75</div>
+        <div class="pt-member">$60</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Mosaic Mycotox Mold Screening</div></div>
+        <div class="pt-retail">$368</div>
+        <div class="pt-member">$275</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Food Explorer IgG/IgE</div></div>
+        <div class="pt-retail">$215</div>
+        <div class="pt-member">$163</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Kryptopyrrole Test</div></div>
+        <div class="pt-retail">$299</div>
+        <div class="pt-member">$199</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Lyme Panel (Western Blot + ELISA)</div></div>
+        <div class="pt-retail">$235</div>
+        <div class="pt-member">$175</div>
+      </div>
+      <div class="pt-row">
+        <div><div class="pt-svc">Supplements</div><div class="pt-note">Thorne, Bio Ray, Neuro Nutrients, and more</div></div>
+        <div class="pt-retail">Retail</div>
+        <div class="pt-member">15–30% off</div>
+      </div>
     </div>
 
-    <p style="font-size:15px; color: var(--text-sec); margin-top:20px; padding: 16px 20px; background: var(--bg-alt, #f8f7f5); border-radius: 10px;">💊 Supplements are given at discount rates — from 15–30% off retail.</p>
-
-    <p class="pricing-fine" style="margin-top:20px;">Need a standalone functional consult without membership? Available at $400.</p>
+    <p class="pricing-fine">Need a standalone functional consult without membership? Available at $400.</p>
   </div>
 </section>
 
@@ -464,9 +509,9 @@ a { color: inherit; text-decoration: none; }
   <div class="creds-inner">
     <div class="eyebrow">Trusted Training. Proven Frameworks.</div>
     <div class="cred-logos">
-      <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/ifm-logo.svg" alt="Institute for Functional Medicine">
-      <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/maps-logo.svg" alt="Medical Academy of Pediatric Special Needs">
-      <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/fmca-logo.webp" alt="Functional Medicine Coaching Academy">
+      <span>IFM</span>
+      <span>MAPS</span>
+      <span>FMCA</span>
     </div>
   </div>
 </section>

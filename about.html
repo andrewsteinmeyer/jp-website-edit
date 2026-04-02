@@ -31,14 +31,14 @@ img { display: block; max-width: 100%; height: auto; }
 .btn:hover { background: var(--copper-hover); transform: translateY(-1px); }
 
 /* Nav */
-
-
-
-
-
-
-
-
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--beige); }
+.nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; }
+.nav-brand { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 15px; color: var(--text-sec); transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-links .nav-cta { background: var(--copper); color: var(--white); padding: 10px 20px; border-radius: var(--radius); font-weight: 500; font-size: 14px; }
+.nav-links .nav-cta:hover { background: var(--copper-hover); color: var(--white); }
 
 /* Hero — full-width image with text overlay */
 .about-hero { position: relative; height: 520px; overflow: hidden; }
@@ -90,8 +90,7 @@ img { display: block; max-width: 100%; height: auto; }
 .credentials h2 { font-size: 22px; margin-bottom: 32px; }
 .cred-row { display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
 .cred-item { text-align: center; }
-.cred-logo { margin-bottom: 12px; }
-.cred-logo img { height: 48px; width: auto; }
+.cred-logo { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 700; color: var(--copper); margin-bottom: 8px; }
 .cred-item p { font-size: 13px; color: var(--text-ter); max-width: 180px; }
 
 /* Bottom CTA */
@@ -121,7 +120,7 @@ img { display: block; max-width: 100%; height: auto; }
     <div class="about-hero-text">
       <div class="eyebrow">About the Practice</div>
       <h1>A Team Built for the Kids Nobody Can Figure Out</h1>
-      <p>Journey Pediatrics was founded on a simple belief: complex children deserve clinicians who won't give up on them.</p>
+      <p>Journey Pediatrics was founded on a simple belief: every child deserves someone who won't stop looking for answers.</p>
     </div>
   </div>
 </section>
@@ -139,7 +138,7 @@ img { display: block; max-width: 100%; height: auto; }
 
       <p>Alice is a nurse practitioner with advanced training from the Institute for Functional Medicine (IFM), the Medical Academy of Pediatric Special Needs (MAPS), and the Functional Medicine Coaching Academy (FMCA).</p>
 
-      <p>She built Journey Pediatrics because she kept seeing the same thing: bright, complicated kids falling through the cracks of conventional medicine. Parents told "they'll grow out of it." Labs that never got run. Fifteen-minute appointments for problems that needed sixty.</p>
+      <p>She built Journey Pediatrics because she kept seeing the same thing: bright, wonderfully complex kids falling through the cracks of conventional medicine. Parents told "they'll grow out of it." Labs that never got run. Fifteen-minute appointments for problems that needed sixty.</p>
 
       <p>Alice doesn't do band-aids. She runs the panels, reads the data, and stays with families until the picture makes sense.</p>
 
@@ -173,8 +172,8 @@ img { display: block; max-width: 100%; height: auto; }
 <!-- Photo break -->
 <section class="photo-break">
   <div class="photo-break-inner">
-    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/diverse-patient-1.png" alt="Diverse families at Journey Pediatrics">
-    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/diverse-patient-2.png" alt="Children and families at Journey Pediatrics">
+    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/girl-drawing-dock-marsh.png" alt="Girl drawing on a marsh dock">
+    <img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/boy-surfboard-beach.png" alt="Boy with surfboard on the beach">
   </div>
 </section>
 
@@ -222,15 +221,15 @@ img { display: block; max-width: 100%; height: auto; }
     <h2>Training &amp; Credentials</h2>
     <div class="cred-row">
       <div class="cred-item">
-        <div class="cred-logo"><img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/ifm-logo.svg" alt="IFM"></div>
+        <div class="cred-logo">IFM</div>
         <p>Institute for Functional Medicine</p>
       </div>
       <div class="cred-item">
-        <div class="cred-logo"><img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/maps-logo.svg" alt="MAPS"></div>
+        <div class="cred-logo">MAPS</div>
         <p>Medical Academy of Pediatric Special Needs</p>
       </div>
       <div class="cred-item">
-        <div class="cred-logo"><img src="https://raw.githubusercontent.com/andrewsteinmeyer/jp-website-edit/main/fmca-logo.webp" alt="FMCA"></div>
+        <div class="cred-logo">FMCA</div>
         <p>Functional Medicine Coaching Academy</p>
       </div>
     </div>
