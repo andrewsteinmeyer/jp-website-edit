@@ -1,5 +1,6 @@
 <style>
-:root {
+
+.jp-embed{
   --copper: #C98769;
   --copper-hover: #B5745A;
   --olive: #373D36;
@@ -15,18 +16,18 @@
   --shadow-card-lg: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.12);
   --max-w: 1080px;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
+.jp-embed *, .jp-embed *::before, .jp-embed *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+.jp-embed{
   font-family: 'Source Sans 3', -apple-system, sans-serif;
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   background: var(--white);
 }
-h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.2; }
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-.eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--copper); font-weight: 600; margin-bottom: 14px; }
+.jp-embed h1, .jp-embed h2, .jp-embed h3{ font-family: 'Montserrat', sans-serif; font-weight: 500; line-height: 1.2; }
+.jp-embed a{ color: inherit; text-decoration: none; }
+.jp-embed img{ display: block; max-width: 100%; }
+.jp-embed .eyebrow{ font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--copper); font-weight: 600; margin-bottom: 14px; }
 
 /* Nav */
 
@@ -39,25 +40,25 @@ img { display: block; max-width: 100%; }
 
 
 /* Page */
-.page { max-width: var(--max-w); margin: 0 auto; padding: 64px 24px 96px; }
-.page-header { text-align: center; margin-bottom: 56px; }
-.page-header h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.02em; margin-bottom: 16px; }
-.page-header p { font-size: 18px; color: var(--text-sec); max-width: 540px; margin: 0 auto; }
+.jp-embed .page{ max-width: var(--max-w); margin: 0 auto; padding: 64px 24px 96px; }
+.jp-embed .page-header{ text-align: center; margin-bottom: 56px; }
+.jp-embed .page-header h1{ font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.02em; margin-bottom: 16px; }
+.jp-embed .page-header p{ font-size: 18px; color: var(--text-sec); max-width: 540px; margin: 0 auto; }
 
 /* Layout */
-.book-layout { display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: start; }
+.jp-embed .book-layout{ display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: start; }
 
 /* Calendly */
-.calendly-section { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-card-lg); overflow: hidden; min-height: 660px; }
-.calendly-section iframe { width: 100%; height: 660px; border: none; }
+.jp-embed .calendly-section{ background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-card-lg); overflow: hidden; min-height: 660px; }
+.jp-embed .calendly-section iframe{ width: 100%; height: 660px; border: none; }
 
 /* Contact Form */
-.contact-section { background: var(--cream); border-radius: var(--radius-lg); padding: 36px; }
-.contact-section h2 { font-size: 20px; margin-bottom: 8px; }
-.contact-section > p { font-size: 15px; color: var(--text-sec); margin-bottom: 28px; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-sec); margin-bottom: 8px; }
-.form-group input, .form-group textarea {
+.jp-embed .contact-section{ background: var(--cream); border-radius: var(--radius-lg); padding: 36px; }
+.jp-embed .contact-section h2{ font-size: 20px; margin-bottom: 8px; }
+.jp-embed .contact-section > p{ font-size: 15px; color: var(--text-sec); margin-bottom: 28px; }
+.jp-embed .form-group{ margin-bottom: 20px; }
+.jp-embed .form-group label{ display: block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-sec); margin-bottom: 8px; }
+.jp-embed .form-group input, .jp-embed .form-group textarea{
   width: 100%;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 15px;
@@ -69,9 +70,9 @@ img { display: block; max-width: 100%; }
   transition: border-color 0.2s;
   outline: none;
 }
-.form-group input:focus, .form-group textarea:focus { border-color: var(--copper); }
-.form-group textarea { height: 120px; resize: vertical; }
-.form-btn {
+.jp-embed .form-group input:focus, .jp-embed .form-group textarea:focus{ border-color: var(--copper); }
+.jp-embed .form-group textarea{ height: 120px; resize: vertical; }
+.jp-embed .form-btn{
   display: inline-block;
   background: var(--copper);
   color: var(--white);
@@ -85,22 +86,24 @@ img { display: block; max-width: 100%; }
   transition: background 0.2s;
   width: 100%;
 }
-.form-btn:hover { background: var(--copper-hover); }
+.jp-embed .form-btn:hover{ background: var(--copper-hover); }
 
 /* Info */
-.contact-info { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--beige); }
-.contact-info p { font-size: 14px; color: var(--text-sec); margin-bottom: 6px; }
-.contact-info a { color: var(--copper); font-weight: 500; }
+.jp-embed .contact-info{ margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--beige); }
+.jp-embed .contact-info p{ font-size: 14px; color: var(--text-sec); margin-bottom: 6px; }
+.jp-embed .contact-info a{ color: var(--copper); font-weight: 500; }
 
 /* Photo */
-.book-photo { margin-top: 64px; text-align: center; }
-.book-photo img { border-radius: 20px; max-width: 720px; margin: 0 auto; aspect-ratio: 16/9; object-fit: cover; }
+.jp-embed .book-photo{ margin-top: 64px; text-align: center; }
+.jp-embed .book-photo img{ border-radius: 20px; max-width: 720px; margin: 0 auto; aspect-ratio: 16/9; object-fit: cover; }
 
 @media (max-width: 900px) {
-  .book-layout { grid-template-columns: 1fr; }
+  .jp-embed .book-layout{ grid-template-columns: 1fr; }
 }
+
 </style>
 
+<div class="jp-embed">
 <div class="page">
   <div class="page-header">
     <div class="eyebrow">Let's Talk</div>
@@ -149,4 +152,5 @@ img { display: block; max-width: 100%; }
   <div class="book-photo">
     <img src="girl-binoculars-beach.png" alt="Girl with binoculars looking through beach grass">
   </div>
+</div>
 </div>
